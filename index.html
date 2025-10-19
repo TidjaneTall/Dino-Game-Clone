@@ -2,28 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dino Game Clone | Abinandh MJ</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Enhanced Dino Runner - Comet Edition</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" type="module"></script>
 </head>
 <body>
-    <img src="images/logo-dino.png" alt="dino-logo" width="100px" class="logo">
-    <div class="world" data-world>
-        <div class="highscore" data-Highscore><span class="high">HI</span> 10000 </div>
-        <div class="separator">|</div>
-        <div class="score" data-score>0</div>
-        <div class="start-screen" data-start-screen>Press any key to Start</div>
-        <img src="images/ground.png" class="ground" data-ground>
-        <img src="images/ground.png" class="ground" data-ground>
-        <img src="images/clouds.png" class="clouds" data-clouds>
-        <img src="images/clouds.png" class="clouds" data-clouds>
-        <img src="images/dino-stationary.png" class="dino" data-dino>
+    <!-- Game Container -->
+    <div class="game-container">
+        <!-- HUD -->
+        <div class="hud">
+            <div class="score-display">
+                <span class="label">SCORE</span>
+                <span class="score" data-score>0</span>
+            </div>
+            <div class="high-score-display">
+                <span class="label">HI</span>
+                <span class="high-score" data-highscore>0</span>
+            </div>
+        </div>
+
+        <!-- Game World -->
+        <canvas id="gameCanvas" data-canvas></canvas>
+
+        <!-- Start Screen -->
+        <div class="start-screen" data-start-screen>
+            <h1>COMET DINO RUNNER</h1>
+            <p>Press SPACE or CLICK to Start</p>
+            <small>Enhanced Edition</small>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div class="game-over-screen" data-game-over-screen style="display: none;">
+            <h2>GAME OVER</h2>
+            <p class="final-score">Score: <span data-final-score>0</span></p>
+            <p class="restart-hint">Press SPACE to Restart</p>
+        </div>
     </div>
+
+    <!-- Game Scripts -->
+    <script src="script.js" type="module"></script>
 </body>
 </html>
